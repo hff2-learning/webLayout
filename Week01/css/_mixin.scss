@@ -1,0 +1,25 @@
+@mixin titleStyle {
+    h2 {
+        font-size: $second-title;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 16px;
+
+        & span {
+            font-weight: 600;
+            font-size: $content;
+            padding-left: 16px;
+            color: #A00404;
+        }
+    }
+}
+
+@mixin Roboto($fontWeight:400) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: $fontWeight;
+}
+
+@mixin NotoSans($fontWeight:400) {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: $fontWeight;
+}
