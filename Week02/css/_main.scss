@@ -1,0 +1,187 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.banner {
+    // 需複習
+    height: 968px;
+    background-image: url('../img/banner.png');
+    background-size: cover;
+    background-position: center center;
+    @include center;
+
+    .banner-body {
+        color: $white;
+
+        span {
+            @include Bold;
+        }
+
+        h1 {
+            @include Black;
+            line-height: 106px;
+            margin-bottom: 32px;
+        }
+
+        p {
+            @include Bold;
+            line-height: 36px;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            display: flex;
+
+            & li {
+                margin-right: 16px;
+            }
+        }
+    }
+}
+
+.about {
+    @include center;
+    flex-direction: column;
+
+    .subtitle {
+        @include Medium(64px);
+        padding-top: 56px;
+        padding-bottom: 40px;
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    .about-item {
+        padding-bottom: 24px;
+        border-bottom: 1px solid #000;
+        margin-bottom: 28px;
+
+        li {
+            @include Bold;
+            line-height: 42px;
+            text-align: center;
+        }
+    }
+
+    .about-list {
+        text-align: center;
+        margin-bottom: 28px;
+
+        span {
+            content: '';
+            background-color: #891818;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 16px;
+        }
+
+        p {
+            display: inline-block;
+            @include Bold;
+            margin-bottom: 28px;
+        }
+    }
+}
+
+.brand {
+    background-color: black;
+    color: $white;
+
+    .brand-title {
+        text-align: center;
+        @include Medium(64px);
+        padding-top: 56px;
+        margin-bottom: 12px;
+    }
+
+    .brand-content {
+        p {
+            text-align: center;
+            @include Medium;
+            line-height: 30px;
+            padding-bottom: 68px;
+
+            &:first-child {
+                @include Medium(24px);
+                line-height: 42px;
+                padding-bottom: 32px;
+            }
+        }
+    }
+
+    .brand-product {
+        @include center;
+        flex-wrap: wrap;
+        padding-bottom: 120px;
+
+        li {
+            &:last-child {
+                margin-left: 24px;
+            }
+
+            img {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+.work {
+    h2 {
+        @include Medium(64px);
+        padding-top: 56px;
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        @include Medium(20px);
+        line-height: 30px;
+        margin-bottom: 56px;
+    }
+
+    .work-product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 144px;
+
+        img {
+            margin-bottom: 16px;
+        }
+
+        p {
+            @include Medium(20px);
+            line-height: 42px;
+        }
+    }
+}
+
+.contact {
+    @include center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+
+    h2 {
+        padding-top: 64px;
+        margin-bottom: 16px;
+        @include Medium(64px);
+    }
+
+    .contact-list {
+        margin-bottom: 48px;
+
+        li {
+            @include Medium;
+            margin-bottom: 16px;
+            line-height: 36px;
+        }
+    }
+}
