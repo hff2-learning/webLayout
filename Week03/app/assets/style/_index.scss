@@ -1,0 +1,383 @@
+.header{
+    background: url(../images/banner.png) no-repeat;
+    @include bgSetting;
+    height: 840px;
+    @include pad-768{
+        height: 394px;
+    }
+    color:$secondary-color;
+    &-right{
+        text-align: right;
+        min-height: 100%;
+        @include pc-1024 {
+            padding-right: 23px;
+        }
+    }
+    &-subtitle{
+        @include font(36px, $regular);
+        line-height: 54px;
+        @include pc-1024 {
+            @include font(20px, $bold);
+            line-height: 30px;
+        }
+        @include pad-768 {
+            @include font(16px, $bold);
+        }
+    }
+
+    &-title{
+        @include font(64px, $bold);
+        line-height: 96px;
+
+        @include pc-1024 {
+            @include font(48px, $bold);
+            line-height: 72px;
+        }
+        @include pad-768 {
+            @include font(32px, $bold);
+            line-height: 1;
+        }
+    }
+}
+
+.main{
+    background-color: $light-color;
+    padding-bottom: 80px;
+        @include pc-1024 {
+            @include font(32px, $bold);
+            line-height: 48px;
+            padding: 40px 0px 11px 0px;
+        }
+        @include pad-768 {
+            @include font(24px, $bold);
+            line-height: 48px;
+            padding: 32px 0px 0px 0px;
+        }
+    &-title{
+        h2{
+            @include sectionTitle($secondary-color);
+
+            @include pc-1024 {
+                @include font(32px, $bold);
+                line-height: 48px;
+                padding: 0px 0px 40px 0px;
+            }
+        }
+    }
+
+    &-feature{
+        @include pc-1024 {
+            width: 615px;
+            margin: 0 auto;
+        }
+        @include pad-768 {
+            width: 255px;
+            justify-content: center;
+        }
+        &-item{
+            @include pc-1024 {
+                width: 35%;
+                margin-bottom: 45px;
+            }
+            @include pad-768 {
+                width: 90%;
+                margin-bottom: 40px;
+            }
+            img {
+                padding: 0px 72px 0px 72px;
+                margin-bottom: 24px;
+            }
+            h3{
+                margin-bottom: 8px;
+                text-align: center;
+                @include font(24px,$bold);
+                line-height: 36px;
+                color: $secondary-color;
+            }
+            p{
+                width: 255px;
+                @include font(16px,$regular);
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.classicGlasses{
+    padding-bottom: 48px;
+    .container{
+        @include pc-1024 {
+            padding-left: 39px;
+        }
+        @include pad-768 {
+            padding: 0px 15px 0px 15px;
+        }
+    }
+    h2{
+        color: $secondary-color;
+        padding: 60px 0 40px 0;
+        @include font(48px,$bold);
+        text-align: center;
+        @include pc-1024{
+            padding: 40px 0 32px 0;
+            @include font(32px, $bold);
+        }
+    }
+    &-box{
+        &-item{
+            padding-bottom: 32px;
+            @include pc-1024 {
+                padding-bottom: 8px;
+            }
+            @include pad-768 {
+                padding-right: 0;
+                position: relative;
+            }
+            &-img{
+                width: 60%;
+                @include pc-1024 {
+                    @include size(390px, 168px);
+                    padding-right: 30px;
+                    padding-left: 0px;
+                }
+                @include pad-768 {
+                    width: 100%;
+                    padding-right: 0;
+                }
+                img{
+                    @include pc-1024 {
+                        @include size(390px, 168px);
+                    }
+                    @include pad-768 {
+                        width: 100%;
+                    }
+                }
+            }
+            &-word{
+                @include fontRobo(48px, $black_italic);
+                color: $primary-color;
+                @include pc-1024 {
+                    @include fontRobo(28px, $black_italic);
+                    line-height: 72px;
+                }
+                @include pad-768 {
+                    position: absolute;
+                    top:25%;
+                    right:25%;
+                }
+                img{
+                    padding-right: 10px;
+                }
+            }
+            @include pc-1024{
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+.joint{
+    background: url(../images/bg.png) no-repeat;
+    @include bgSetting;
+    height: 705px;
+    @include pc-1024 {
+        padding: 39px;
+        height: 452px;
+    }
+    @include pad-768{
+        height: 719px;
+    }
+    h2{
+        @include sectionTitle($light-border-color);
+        @include pc-1024 {
+            padding: 0px 0 32px 0;
+        }
+        @include pad-768 {
+            padding: 0px 0 20px 0;
+            @include font(20px,$bold);
+        }
+    }
+    &-content{
+        color: $primary-color;
+        position: relative;
+        img{
+            @include size(540px,455px);
+            @include pc-1024 {
+                @include size(330px,278px);
+            }
+                @include pad-768 {
+                    @include font(20px, $bold);
+                }
+        }
+        &-right{
+            position: relative;
+            @include size(540px, 455px);
+            @include font(72px,$bold);
+            @include pc-1024 {
+                @include size(330px, 278px);
+            }
+
+            h3{
+                position: absolute;
+                top: 181px;
+                right: 152px;
+                @include pc-1024 {
+                    @include font(32px,$bold);
+                    top: 113px;
+                    right: 117px;
+                }
+            }
+            &::before{
+                @include blur;
+            }
+        }
+        &-left {
+            position: relative;
+            @include size(540px, 455px);
+            @include font(72px, $bold);
+            @include pc-1024 {
+                @include size(330px, 278px);
+            }
+            @include pad-768{
+                margin-bottom: 20px;
+            }
+            h3{
+                position: absolute;
+                top: 181px;
+                right: 104px;
+                @include pc-1024 {
+                    @include font(32px, $bold);
+                    top: 117px;
+                    right: 91px;
+                }
+            }
+            &::before {
+                @include blur;
+            }
+        }
+    }
+}
+
+.customer{
+    padding-bottom: 80px;
+    h2{
+        @include sectionTitle($secondary-color);
+        @include pc-1024{
+            padding: 40px 0 32px 0;
+        }
+    }
+    &-box{
+        @include pc-1024 {
+            width: 100%;
+            justify-content: space-around;
+        }
+        &-item{
+            @include pc-1024 {
+                width: 40%;
+                margin-bottom: 32px;
+            }
+            @include pad-768 {
+                width: 100%;
+            }
+            border: 1px solid $dark-border-color;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            @include size(255px, 460px);
+            img{
+                display: block;
+                @include size(255px,256px);
+                @include pc-1024{
+                    width: 100%;
+                }
+            }
+            &-word{
+                padding: 16px;
+                height: 204px;
+                h4 {
+                    @include font(14px, $medium);
+                    line-height: 21px;
+                    padding-bottom: 8px;
+                }
+
+                p {
+                    @include font(16px, $medium);
+                    line-height: 24px;
+                }
+                &-bottom{
+                    p{
+                        @include font(14px, $regular);
+                        line-height: 21px;
+                        color: $font-color-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contactUs{
+    background-color: #AA06010D;
+    padding-bottom: 96px;
+    h2{
+        @include sectionTitle($font-color);
+        padding-bottom: 24px;
+    }
+    p{
+        @include font(20px,$regular);
+        padding-bottom: 20px;
+        line-height: 32px;
+    }
+    .container{
+        max-width: 730px;
+        @include pc-1024 {
+            max-width: 450px;
+            padding: 0;
+        }
+        @include pad-768 {
+            max-width: 345px;
+            padding: 0;
+        }
+    }
+    &-indexForm{
+        &-item{
+            padding-bottom: 16px;
+            label{
+                line-height: 24px;
+            }
+            input{
+                width: 100%;
+                height: 50px;
+                padding-left: 16px;
+                @include font(16px,$regular);
+                color: $font-color-small;
+            }
+            textarea{
+                width: 100%;
+                height: 136px;
+                @include font(16px, $regular);
+                color: $dark-border-color;
+                padding-left: 16px;
+                padding-top: 12px;
+            }
+        }
+        &-check{
+            padding-bottom: 40px;
+            label{
+                @include font(16px,$regular);
+                line-height: 24px;
+            }
+        }
+        &-submit{
+            @include size(350px,54px);
+            border: none;
+            cursor: pointer;
+            background: $primary-color;
+            color:$light-border-color;
+            @include font(16px,$bold);
+            margin: 0 auto;
+            display: block;
+            @include pc-1024 {
+                @include size(210px, 40px);
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.fqa{
+    @include pc-1024 {
+        .container{
+            padding: 60px 40px 0px 40px;
+        }
+    }
+    @include pad-768{
+        .container {
+            padding: 28px 15px 0px 15px;
+        }
+    }
+    &-header{
+        padding: 96px 0px 60px 0px;
+        @include pc-1024{
+            padding-bottom: 40px;
+        }
+        h2{
+            @include font(48px,$bold);
+            border-left: 8px solid #9F1213;
+            padding-left: 16px;
+            line-height: 48px;
+            @include pad-768 {
+                @include font(28px,$bold);
+            }
+        }
+    }
+    &-content-qa{
+        padding-bottom: 128px;
+        @include pc-1024{
+            padding-bottom: 64px;
+        }
+        &-title{
+            @include font(32px,$bold);
+            padding-bottom: 36px;
+            @include pad-768 {
+                @include font(20px, $regular);
+            }
+        }
+        &-item{
+            &-question{
+                @include font(20px,$bold);
+                margin-bottom: 16px;
+                line-height: 23px;
+                @include pad-768 {
+                    @include font(16px, $bold);
+                    line-height: 24px;
+                }
+            }
+            &-answers{
+                padding-left: 95px;
+                margin-bottom: 32px;
+                line-height: 24px;
+                @include pc-1024 {
+                    padding-left:0px;
+                }
+                @include pad-768 {
+
+                    &-answer{
+                        &:last-child {
+                            padding-top: 20px;
+                        }
+                        @include font(16px, $regular);
+                        @include pad-768 {
+                                @include font(14px, $regular);
+                                line-height: 21px;
+                            }
+                        }
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@mixin size($w,$h) {
+    width:$w;
+    height:$h;
+}
+
+@mixin blur{
+    content: '';
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+@mixin sectionTitle($light-border-color) {
+    padding: 60px 0 40px 0;
+    @include font(32px, $bold);
+    color: $light-border-color;
+    text-align: center;
+}
+
+@mixin bgSetting{
+    background-size: cover;
+    background-position: center center;
+}

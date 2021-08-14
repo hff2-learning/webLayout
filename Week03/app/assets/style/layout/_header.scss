@@ -1,0 +1,56 @@
+.nav{
+    background-color: $primary-color;
+    padding: 0 88px;
+    @include pc-1024{
+        padding: 0 39px;
+    }
+    @include pad-768{
+        padding: 0;
+    }
+    &-logo{
+        display: block;
+        background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/logo.png?raw=true) no-repeat;
+        @include size(80px,48px);
+        background-size: cover;
+        white-space: nowrap;
+        text-indent: 101%;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 30px 0px;
+        @include pad-768{
+            @include size(48px, 29px);
+            margin: 10px auto;
+        }
+    }
+    &-bar {
+        @include pad-768{
+            width: 100%;
+        }
+        li {
+            @include font(24px, regular);
+            padding: 38px 0px 41px 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include pad-768{
+                width: 50%;
+                padding: 8px 54px;
+                border: 1px solid $light-border-color;
+            }
+            @include mobile-576{
+                text-align: center;
+                padding: 8px 0px;
+            }
+            a {
+                color: $light-border-color;
+            }
+        }
+    }
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
